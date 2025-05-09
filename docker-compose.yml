@@ -4,5 +4,5 @@ services:
     expose:
       - 80
     ports:
-      - "8000:80"
-    entrypoint: "gunicorn base_django.wsgi -b 0.0.0.0:80"
+      - "8000:8000"
+    entrypoint: "gunicorn base_django.wsgi -b 0.0.0.0:8000"
