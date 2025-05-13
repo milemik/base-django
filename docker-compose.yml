@@ -6,3 +6,7 @@ services:
     ports:
       - "8000:8000"
     entrypoint: "gunicorn base_django.wsgi -b 0.0.0.0:8000"
+    environment:
+      - DEBUG=${DJANGO_DEBUG}
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - ALLOWED_HOSTS=${ALLOWED_HOSTS}
